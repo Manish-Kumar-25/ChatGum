@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+    >
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>iChatGum - Chat App</title>
+</head>
+<body>
+    <h1 class="title">ichatGum</h1>
+
+    <div class="main">
+        <!-- Username -->
+        <div class="name">
+            <span><i class="fas fa-user"></i></span>
+
+            <input
+                type="text"
+                id="name-input"
+                class="name-input"
+                placeholder="Enter your name"
+                maxlength="15"
+                autocomplete="off"
+            >
+        </div>
+
+        <!-- Messages -->
+        <ul class="message-container" id="message-container">
+
+            <!-- Welcome message -->
+            <li class="message-left" id="welcome-message">
+                <p class="message">
+                    Hii Frogs...
+                </p>
+            </li>
+
+            <!-- Chat messages will be added using JavaScript -->
+
+        </ul>
+
+        <!-- Message form -->
+        <form class="message-form" id="message-form">
+            <input
+                type="text"
+                name="message"
+                id="message-input"
+                class="message-input"
+                placeholder="Type a message..."
+                autocomplete="off"
+                required
+            >
+
+            <div class="v-divider"></div>
+
+            <button type="submit" class="send-button">
+                Send
+                <span>
+                    <i class="fas fa-paper-plane"></i>
+                </span>
+            </button>
+        </form>
+    </div>
+
+    <!-- Connected clients -->
+    <h3 class="clients-total" id="client-total">
+        Total Clients: 0
+    </h3>
+
+    <script src="/socket.io/socket.io.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.31.0/moment.min.js"></script>
+
+    <script src="main.js"></script>
+</body>
+</html>
